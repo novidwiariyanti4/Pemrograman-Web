@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #1f2937;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    padding: 35px;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 440px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 24px;
+    color: #111827;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.search-form input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+.search-form button {
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.search-form button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* Status Messages */
+.status-message {
+    margin: 15px 0;
+    font-weight: 500;
+    font-size: 14px;
+    color: #4b5563;
+}
+
+.status-message.error {
+    color: #dc2626;
+    background-color: #fef2f2;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #fecaca;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Profile Card Super Elegan */
+.profile-card {
+    margin-top: 25px;
+    padding: 30px 20px;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f3f4f6;
+    animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.avatar-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 14px;
+}
+
+.profile-card img {
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #6366f1;
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+.profile-card h3 {
+    color: #111827;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.profile-card .bio {
+    font-size: 13.5px;
+    color: #6b7280;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    padding: 0 10px;
+}
+
+/* Kotak Statistik 3 Kolom (Repo, Followers, Following) */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.stat-box {
+    background: #f8fafc;
+    padding: 12px 8px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.stat-box:hover {
+    transform: translateY(-2px);
+    border-color: #cbd5e1;
+}
+
+.stat-label {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #64748b;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.stat-box strong {
+    font-size: 15px;
+    color: #0f172a;
+}
+
+.btn-link {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    background: #0f172a;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
+}
+
+.btn-link:hover {
+    background: #1e293b;
+    transform: translateY(-1px);
+}
+
+.btn-link:active {
+    transform: scale(0.98);
+}

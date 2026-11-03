@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pencarian Profil GitHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Cari Profil GitHub</h2>
+        
+        <!-- Form Input Username -->
+        <form id="searchForm" class="search-form">
+            <input 
+                type="text" 
+                id="usernameInput" 
+                placeholder="Masukkan username GitHub..." 
+                required 
+            />
+            <button type="submit">Cari</button>
+        </form>
+
+        <!-- Elemen Tampilan Kondisi -->
+        <div id="loading" class="status-message hidden">Memuat data...</div>
+        <div id="errorMessage" class="status-message error hidden">User tidak ditemukan!</div>
+
+        <!-- Kartu Hasil Profil -->
+        <div id="profileCard" class="profile-card hidden">
+            <div class="avatar-wrapper">
+                <img id="avatar" src="" alt="Avatar Profil" />
+            </div>
+            
+            <h3 id="name"></h3>
+            <p id="bio" class="bio"></p>
+
+            <!-- Statistik Kotak (Repositori, Followers, Following) -->
+            <div class="stats-container">
+                <div class="stat-box">
+                    <span class="stat-label">Repo</span>
+                    <strong id="publicRepos">0</strong>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Followers</span>
+                    <strong id="followers">0</strong>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Following</span>
+                    <strong id="following">0</strong>
+                </div>
+            </div>
+
+            <a id="profileLink" href="" target="_blank" rel="noopener noreferrer" class="btn-link">Kunjungi Profil GitHub</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
